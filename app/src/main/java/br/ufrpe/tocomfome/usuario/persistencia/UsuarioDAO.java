@@ -5,14 +5,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import br.ufrpe.tocomfome.infra.persistencia.DBHelper;
+import br.ufrpe.tocomfome.usuario.dominio.Usuario;
 
-import br.ufrpe.revcare.infra.persistencia.DBHelper;
-import br.ufrpe.revcare.usuario.dominio.Usuario;
-
-import static br.ufrpe.revcare.infra.persistencia.DBHelper.COL_CPF_USUARIO;
-import static br.ufrpe.revcare.infra.persistencia.DBHelper.COL_EMAIL_USUARIO;
-import static br.ufrpe.revcare.infra.persistencia.DBHelper.COL_SENHA_USUARIO;
-import static br.ufrpe.revcare.infra.persistencia.DBHelper.TABELA_USUARIO;
 
 
 public class UsuarioDAO  {

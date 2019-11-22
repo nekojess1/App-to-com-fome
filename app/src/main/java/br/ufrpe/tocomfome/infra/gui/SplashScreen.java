@@ -8,7 +8,8 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 import br.ufrpe.revcare.R;
-import br.ufrpe.revcare.infra.persistencia.PopularBanco;
+import br.ufrpe.tocomfome.usuario.gui.MainActivity;
+
 
 public class SplashScreen extends AppCompatActivity {
 

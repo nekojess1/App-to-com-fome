@@ -1,4 +1,4 @@
-package br.ufrpe.revcare;
+package br.ufrpe.tocomfome;
 
 import org.junit.Test;
 

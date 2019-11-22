@@ -1,4 +1,4 @@
-package br.ufrpe.revcare;
+package br.ufrpe.tocomfome;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("br.ufrpe.revcare", appContext.getPackageName());
+        assertEquals("br.ufrpe.tocomfome", appContext.getPackageName());
     }
 }

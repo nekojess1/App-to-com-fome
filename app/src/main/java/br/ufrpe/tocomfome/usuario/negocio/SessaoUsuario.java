@@ -2,7 +2,8 @@ package br.ufrpe.tocomfome.usuario.negocio;
 
 import java.util.Date;
 
-import br.ufrpe.revcare.usuario.dominio.Usuario;
+import br.ufrpe.tocomfome.usuario.dominio.Usuario;
+
 
 public class SessaoUsuario {
     public static Usuario usuarioLogado;

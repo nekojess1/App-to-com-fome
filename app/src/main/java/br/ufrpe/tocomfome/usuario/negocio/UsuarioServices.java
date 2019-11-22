@@ -4,8 +4,8 @@ import android.content.Context;
 
 import java.util.Date;
 
-import br.ufrpe.revcare.usuario.dominio.Usuario;
-import br.ufrpe.revcare.usuario.persistencia.UsuarioDAO;
+import br.ufrpe.tocomfome.usuario.dominio.Usuario;
+import br.ufrpe.tocomfome.usuario.persistencia.UsuarioDAO;
 
 
 public class UsuarioServices {

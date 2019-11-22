@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.ufrpe.tocomfome">
+    package="br.ufrpe.revcare">
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -18,12 +18,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".infra.gui.MainActivity" />
-        <activity android:name=".infra.gui.EsqueceuSenha" />
-        <activity android:name=".usuario.gui.HomeUsuario" />
-        <activity android:name=".usuario.gui.CadastroUsuario" />
+        <activity android:name="br.ufrpe.tocomfome.usuario.gui.HomeUsuario"></activity>
+        <activity android:name="br.ufrpe.tocomfome.usuario.gui.MainActivity" />
+        <activity android:name="br.ufrpe.tocomfome.usuario.gui.CadastroUsuario" />
         <activity
-            android:name=".infra.gui.SplashScreen"
+            android:name="br.ufrpe.tocomfome.infra.gui.SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

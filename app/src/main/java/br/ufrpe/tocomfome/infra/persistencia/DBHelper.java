@@ -24,7 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_TABLE = "CREATE TABLE %1$s ";
     private static final String SQL_INTEGER_AUTOINCREMENT = "  %2$s INTEGER PRIMARY KEY AUTOINCREMENT, ";
     private static final String[] TABELAS = {
-            TABELA_PROFISSIONAL, TABELA_COMIDA,
+            TABELA_USUARIO, TABELA_COMIDA,
     };
 
 
@@ -59,8 +59,8 @@ public class DBHelper extends SQLiteOpenHelper {
                 " %5$s BLOB " +
                 ");";
         sqlTbComida= String.format(sqlTbComida,
-                TABELA_PROFISSIONAL, COL_ID_PROFISSIONAL, COL_NOME_PROFISSIONAL,
-                COL_DESCRICAO, COL_FOTO_PROFISSIONAL);
+                TABELA_COMIDA, COL_ID_COMIDA, COL_NOME_COMIDA,
+                COL_DESCRICAO, COL_FOTO_COMIDA);
 
         db.execSQL(sqlTbComida);
     }
