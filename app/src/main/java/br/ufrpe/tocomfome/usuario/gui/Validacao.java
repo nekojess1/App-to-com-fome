@@ -1,4 +1,4 @@
-package br.ufrpe.tocomfome.infra.gui;
+package br.ufrpe.tocomfome.usuario.gui;
 
 import android.content.Context;
 import android.widget.EditText;

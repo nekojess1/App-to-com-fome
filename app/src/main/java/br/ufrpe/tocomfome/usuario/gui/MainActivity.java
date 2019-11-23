@@ -1,4 +1,4 @@
-package br.ufrpe.tocomfome.infra.gui;
+package br.ufrpe.tocomfome.usuario.gui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,11 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.Toast;
 import br.ufrpe.revcare.R;
-import br.ufrpe.tocomfome.usuario.gui.CadastroUsuario;
-import br.ufrpe.tocomfome.usuario.gui.HomeUsuario;
 import br.ufrpe.tocomfome.usuario.negocio.UsuarioServices;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void entrarUsuario(EditText campoEmail, EditText campoSenha) {
         UsuarioServices services = new UsuarioServices(getBaseContext());
-        br.ufrpe.tocomfome.infra.gui.Validacao validacao = new br.ufrpe.tocomfome.infra.gui.Validacao();
+        Validacao validacao = new Validacao();
         if (validacao.isValido(campoEmail,campoSenha)){
             String email = campoEmail.getText().toString().trim();
             String senha = campoSenha.getText().toString().trim();
