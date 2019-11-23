@@ -26,8 +26,8 @@ public class UsuarioDAO  {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(DBHelper.COL_NOME_USUARIO, usuario.getNome());
-        values.put(DBHelper.COL_EMAIL_USUARIO, usuario.getEmail());
-        values.put(DBHelper.COL_SENHA_USUARIO, usuario.getSenha());
+        values.put(COL_EMAIL_USUARIO, usuario.getEmail());
+        values.put(COL_SENHA_USUARIO, usuario.getSenha());
 
         long id = db.insert(TABELA_USUARIO, null, values);
         db.close();

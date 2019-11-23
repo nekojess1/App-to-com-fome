@@ -1,5 +1,6 @@
 package br.ufrpe.tocomfome.comida.persistencia;
 
+import android.app.DownloadManager;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,9 +9,7 @@ import android.database.Cursor;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.ufrpe.tocomfome.comida.dominio.Comida;
 import br.ufrpe.tocomfome.infra.persistencia.DBHelper;
-import static br.ufrpe.tocomfome.infra.persistencia.DBHelper.TABELA_COMIDA;
 
 
 public class ComidaDAO {
@@ -27,7 +26,7 @@ public class ComidaDAO {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(DBHelper.COL_NOME_COMIDA, comida.getNome());
-        values.put(DBHelper.COL_DESCRICAO, comida.getDescricao());
+        values.put(DBHelper.COL_DESCRICAO_COMIDA, comida.getDescricao());
         values.put(DBHelper.COL_FOTO_COMIDA, comida.getFoto());
 
         long id = db.insert(TABELA_COMIDA, null, values);
@@ -74,7 +73,7 @@ public class ComidaDAO {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues valores = new ContentValues();
         valores.put("descricao", comida.getDescricao());
-        db.update("Tabela_Comida", valores, "id = ?", new String[]{String.valueOf(comida.getId())});
+        db.update("Tabela_Comida", valores, "id = ?", new String[]{String.valueOf(profissional.getId())});
         db.close();
     }
 
@@ -97,7 +96,7 @@ public class ComidaDAO {
         }
         cursor.close();
         leitorBanco.close();
-        return comida;
+        return profis;
     }
     public Comida getComidaById(long id) {
         String query = "SELECT * FROM Tabela_Comida " +
