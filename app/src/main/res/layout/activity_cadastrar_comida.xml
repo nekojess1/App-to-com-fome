@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usuario.gui.CadastrarComida">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/barra_superior"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:background="#AF0D25"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/labelNome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/decricaocomida"
+        android:layout_width="357dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="17dp"
+        android:background="#80CACACA"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/labelfoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelDescricao" />
+
+    <TextView
+        android:id="@+id/labelDescricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="23dp"
+        android:text="Descrição"
+        android:textColor="#0A0404"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/decricaocomida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeTextField" />
+
+    <EditText
+        android:id="@+id/nomeTextField"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="Digite o nome da comida"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/labelDescricao"
+        app:layout_constraintStart_toStartOf="@+id/labelNome"
+        app:layout_constraintTop_toBottomOf="@+id/labelNome"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/labelNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Nome da comida"
+        android:textColor="#0A0404"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nomeTextField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra_superior" />
+
+    <TextView
+        android:id="@+id/labelfoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="Adicionar foto"
+        android:textColor="#0A0404"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/selecionararqv"
+        app:layout_constraintStart_toStartOf="@+id/decricaocomida"
+        app:layout_constraintTop_toBottomOf="@+id/decricaocomida" />
+
+    <Button
+        android:id="@+id/selecionararqv"
+        android:layout_width="180dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:background="@drawable/caixaredonda"
+        android:text="Selecionar arquivo"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/nome_arquivo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelfoto" />
+
+    <TextView
+        android:id="@+id/nome_arquivo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrarccomida"
+        app:layout_constraintEnd_toEndOf="@+id/labelfoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selecionararqv" />
+
+    <Button
+        android:id="@+id/cadastrarccomida"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="161dp"
+        android:background="#AF0D25"
+        android:text="Cadastrar Comida"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_arquivo" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/button"
+        tools:layout_editor_absoluteX="250dp"
+        tools:layout_editor_absoluteY="118dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
