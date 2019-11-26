@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import br.ufrpe.tocomfome.R;
 import br.ufrpe.tocomfome.usuario.gui.CadastrarComida;
 import br.ufrpe.tocomfome.usuario.gui.MainActivity;
+import br.ufrpe.tocomfome.usuario.gui.RecyclerViewUsuario;
 
 public class SplashScreen extends AppCompatActivity {
 

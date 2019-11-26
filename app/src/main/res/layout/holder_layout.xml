@@ -8,28 +8,35 @@
     android:id="@+id/parent_layout">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="170dp"
         android:id="@+id/image"
-        android:layout_marginTop="30dp"
+        android:background="@drawable/comida"
         />
+
     <TextView
+        android:id="@+id/nome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nome"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="71dp"
         android:text="Nome"
-        android:layout_marginLeft="150dp"
-        android:textSize="18sp"
         android:textColor="#000"
-        />
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/descricao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="230dp"
+        android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        android:text="Estado"
+        android:layout_marginTop="242dp"
+        android:text="Descrição"
         android:textColor="#000"
         android:textSize="18sp" />
 

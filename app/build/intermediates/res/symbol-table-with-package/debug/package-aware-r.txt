@@ -1067,6 +1067,7 @@ drawable button
 drawable buttonlike
 drawable caixaredonda
 drawable chat
+drawable comida
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1205,6 +1206,7 @@ id botaoEntrar
 id botaoFinalizarCadastro
 id botao_procurar_usuario
 id bottom
+id btnadicionar
 id buttonPanel
 id buttonSairUsuario
 id cadastrarccomida
@@ -1275,7 +1277,6 @@ id ifRoom
 id image
 id imageView
 id imageView2
-id imageView3
 id imagemuser
 id info
 id invisible
@@ -1285,7 +1286,6 @@ id labelDescricao
 id labelNome
 id labelSenha
 id labeled
-id labelfoto
 id lableEsqueceuSenha
 id largeLabel
 id lblCPF
@@ -1311,7 +1311,6 @@ id never
 id nome
 id nomeTextField
 id nomeUsuarioHome
-id nome_arquivo
 id none
 id normal
 id notification_background
@@ -1353,7 +1352,6 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
-id selecionararqv
 id select_dialog_listview
 id selected
 id senhaTextField

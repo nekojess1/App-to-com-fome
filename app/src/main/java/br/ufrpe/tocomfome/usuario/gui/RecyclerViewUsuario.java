@@ -1,10 +1,12 @@
 package br.ufrpe.tocomfome.usuario.gui;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,7 +23,6 @@ public class RecyclerViewUsuario extends AppCompatActivity implements AdapterVie
     private ArrayList<String> mNomes = new ArrayList<>();
     private ArrayList<String> mDescricao = new ArrayList<>();
     private List<Comida> comidas = new ArrayList<>();
-    private ArrayList<Bitmap> mFotos = new ArrayList<>();
 
 
     @Override
@@ -30,8 +31,13 @@ public class RecyclerViewUsuario extends AppCompatActivity implements AdapterVie
         setContentView(R.layout.activity_recycler_view_usuario);
         getSupportActionBar().hide();
         initComidas();
-
-
+        Button adicionar = findViewById(R.id.btnadicionar);
+        adicionar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecyclerViewUsuario.this, CadastrarComida.class));
+            }
+        });
     }
 
     private void initComidas() {
@@ -46,21 +52,13 @@ public class RecyclerViewUsuario extends AppCompatActivity implements AdapterVie
         for (int i = 0; i < comidas.size(); i++) {
             mNomes.add(comidas.get(i).getNome());
             mDescricao.add(comidas.get(i).getDescricao());
-            byte[] imagemEmBits = comidas.get(i).getFoto();
-            if (comidas.get(i).getFoto() != null) {
-                Bitmap bitmap = BitmapFactory.decodeByteArray(imagemEmBits, 0, imagemEmBits.length);
-                mFotos.add(bitmap);
-            } else {
-                mFotos.add(null);
-            }
-
         }
     }
 
 
     private void initRecyclerView(){
         RecyclerView recyclerView = findViewById(R.id.usuariorecylcer);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mNomes, mDescricao,mFotos);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mNomes, mDescricao);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));

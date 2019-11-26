@@ -12,9 +12,9 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int ic_plusone_medium_off_client = 0x7f070093;
-        public static final int ic_plusone_small_off_client = 0x7f070094;
-        public static final int ic_plusone_standard_off_client = 0x7f070095;
-        public static final int ic_plusone_tall_off_client = 0x7f070096;
+        public static final int ic_plusone_medium_off_client = 0x7f070094;
+        public static final int ic_plusone_small_off_client = 0x7f070095;
+        public static final int ic_plusone_standard_off_client = 0x7f070096;
+        public static final int ic_plusone_tall_off_client = 0x7f070097;
     }
 }

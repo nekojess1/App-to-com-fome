@@ -22,11 +22,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<Bitmap> mFotos = new ArrayList<>();
     private Context mContext;
 
-    public RecyclerViewAdapter(Context context, ArrayList<String> nome, ArrayList<String> descricao, ArrayList<Bitmap> foto) {
+    public RecyclerViewAdapter(Context context, ArrayList<String> nome, ArrayList<String> descricao) {
         this.mNome = nome;
         this.mDescricao = descricao;
         this.mContext = context;
-        this.mFotos = foto;
     }
     @NonNull
     @Override
@@ -39,10 +38,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.nome.setText(mNome.get(position));
         holder.estado.setText(mDescricao.get((position)));
-        if (mFotos.get(position) != null){
 
-            holder.imagem.setImageBitmap(mFotos.get(position));
-        }
 
 
 //        holder.btnVerMais.setOnClickListener(new View.OnClickListener() {
